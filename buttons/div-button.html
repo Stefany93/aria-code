@@ -1,0 +1,42 @@
+<script>
+    let div_button = document.querySelector("#div_button");
+    
+    div_button.addEventListener("click", displayText());
+    
+    document.addEventListener('keyup', function(e){
+            if(document.activeElement.classList.contains('div_button')){
+                console.log("focused the button")
+            }
+    )};
+    document.activeElement()
+
+
+    function displayText(){
+        hidden_text.style.display = "block";
+    }
+</script>
+
+
+<style>
+
+*:focus{
+    outline: 4px solid darkmagenta;
+}
+ .fake_button{
+     background: tomato;
+     color: whitesmoke;
+     border: 1px solid midnightblue;
+     display: inline-block;
+     padding: 10px;
+ }
+ .fake_button:hover{
+     cursor: pointer;
+ }
+</style>
+
+<body>
+<div class="fake_button" role="button" tabindex="0" id="div_button">What is the capital of Bulgaria?</div>
+
+<div class="hidden_text">Sofia</div>
+
+</body>
