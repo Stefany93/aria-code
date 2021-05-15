@@ -1,16 +1,14 @@
 <script>
     let div_button = document.querySelector("#div_button");
     
-    div_button.addEventListener("click", displayText());
+    //div_button.addEventListener("click", displayText());
     
     document.addEventListener('keyup', function(e){
-            if(document.activeElement.classList.contains('div_button')){
-                console.log("focused the button")
-            }
-    )};
-    document.activeElement()
-
-
+        if(document.activeElement.classList.contains('fake_button') && e.keyCode === 13 || e.keyCode === 32){
+            console.log("pressed the button")
+        }
+    });
+    
     function displayText(){
         hidden_text.style.display = "block";
     }
@@ -31,6 +29,9 @@
  }
  .fake_button:hover{
      cursor: pointer;
+ }
+ .hidden_text{
+     display: none;
  }
 </style>
 
