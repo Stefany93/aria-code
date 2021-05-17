@@ -39,7 +39,7 @@
         
     document.addEventListener('keyup', function(e){
 
-        if(document.activeElement.classList.contains('fake_button') && e.keyCode === 13 || e.keyCode === 32){
+        if(document.activeElement.classList.contains('fake_button') && e.keyCode === 13 || e.keyCode === 32){ // Check if they keys pressed are SpaceBar or Enter
             displayText(hidden_text);
         }
     });
