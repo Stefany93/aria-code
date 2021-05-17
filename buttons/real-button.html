@@ -1,0 +1,49 @@
+<style>
+
+    *:focus{
+        outline: 4px solid darkmagenta;
+    }
+    .real_button{
+        background: tomato;
+        color: whitesmoke;
+        border: 1px solid midnightblue;
+        display: inline-block;
+        padding: 10px;
+    }
+    .real_button:hover{
+        cursor: pointer;
+    }
+    .hidden_text{
+        display: none;
+
+        border:1px solid red;
+        margin-top:10px;
+    }
+</style>
+
+<body>
+    <button class="real_button" id="div_button">What is the capital of Bulgaria?</button>
+
+    <div class="hidden_text" id="hidden_text">Sofia</div>
+
+</body>
+
+<script>
+        
+    let div_button = document.querySelector("#div_button");
+    let hidden_text = document.querySelector("#hidden_text");
+
+    document.querySelector("#div_button").addEventListener('click', function(e){
+        displayText(hidden_text);
+    });
+        
+    document.addEventListener('keyup', function(e){
+
+        if(document.activeElement.classList.contains('real_button') && e.keyCode === 13 || e.keyCode === 32){ // Check if they keys pressed are SpaceBar or Enter
+            displayText(hidden_text);
+        }
+    });
+    function displayText(element){
+        element.style.display = "block";
+    }
+</script>
