@@ -1,0 +1,15 @@
+<form>
+    <label>
+        Password:
+        <input name="password" type="password" aria-describedby="help_text" required="true">
+    </label>
+    <input type="submit" value="Submit">
+</form>
+
+
+<script>
+    document.querySelector('form').addEventListener('submit', function()
+    {
+        document.write('form submitted');
+    });
+</script>
