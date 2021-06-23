@@ -1,0 +1,68 @@
+<h1>Role="img"</h1>
+
+<h2>Emojis</h2>
+
+<!-- Inaccessible -->
+<span>🔥</span>
+
+<!-- Accessible -->
+<span role="img" aria-label="Fire Emoji">🔥</span>
+
+<h2>HTML entities</h2>
+
+<!-- Inaccessible -->
+<span>&times;</span>
+
+<!-- Accessible -->
+<span role="img" aria-label="Multiplication">&times;</span>
+
+<h2>Image groups</h2>
+
+
+<h2>ASCII emoji combinations</h2>
+
+<!-- Inaccessible -->
+<p>
+    (╯°□°）╯︵ ┻━┻
+</p>
+
+<!-- Accessible -->
+<!-- Example taken from MDN https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/Role_Img -->
+<div role="img" aria-label="Table flip">
+    <p>
+        (╯°□°）╯︵ ┻━┻
+    </p>
+</div>
+
+<h2>Inline SVG content image</h2>
+
+<!-- Example taken from MDN https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/Role_Img -->
+
+<svg role="img" aria-label="Description of your SVG image">
+    <!-- contents of the SVG image -->
+</svg>
+
+<h2>Image Groups</h2>
+<!-- Accessible -->
+<div role="img" aria-label="3 out of 5 stars rating">
+    <img src="../images/stars/yellow-star.png" alt="Yellow star">
+    <img src="../images/stars/yellow-star.png" alt="Yellow star">
+    <img src="../images/stars/yellow-star.png" alt="Yellow star">
+    <img src="../images/stars/grey-star.png" alt="Grey star">
+    <img src="../images/stars/grey-star.png" alt="Grey star">
+</div>
+
+<div role="img" aria-labelledby="stars">
+    <p id="stars">3 out of 5 stars rating</p>
+    <img src="../images/stars/yellow-star.png" alt="Yellow star">
+    <img src="../images/stars/yellow-star.png" alt="Yellow star">
+    <img src="../images/stars/yellow-star.png" alt="Yellow star">
+    <img src="../images/stars/grey-star.png" alt="Grey star">
+    <img src="../images/stars/grey-star.png" alt="Grey star">
+</div>
+
+<h2>Alt text for CSS background images</h2>
+
+<div role="img" aria-label="Yellow Star">
+    <div style="background-image: url('../images/stars/yellow-star.png');"></div>
+</div>
