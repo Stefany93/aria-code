@@ -44,7 +44,7 @@
 
 <h2>Image Groups</h2>
 <!-- Accessible -->
-<div role="img" aria-label="3 out of 5 stars rating">
+<div class="rating" role="img" aria-label="3 out of 5 stars rating">
     <img src="../images/stars/yellow-star.png" alt="Yellow star">
     <img src="../images/stars/yellow-star.png" alt="Yellow star">
     <img src="../images/stars/yellow-star.png" alt="Yellow star">
@@ -52,7 +52,7 @@
     <img src="../images/stars/grey-star.png" alt="Grey star">
 </div>
 
-<div role="img" aria-labelledby="stars">
+<div class="rating" role="img" aria-labelledby="stars">
     <p id="stars">3 out of 5 stars rating</p>
     <img src="../images/stars/yellow-star.png" alt="Yellow star">
     <img src="../images/stars/yellow-star.png" alt="Yellow star">
@@ -64,5 +64,22 @@
 <h2>Alt text for CSS background images</h2>
 
 <div role="img" aria-label="Yellow Star">
-    <div style="background-image: url('../images/stars/yellow-star.png');"></div>
+    <div class="bg-image" style="background-image: url('../images/stars/yellow-star.png');"></div>
 </div>
+
+<style>
+    .bg-image{
+        width: 200px;
+        height: 200px;
+        background-repeat: no-repeat;
+    }
+
+    .rating{
+        max-width: 279px;
+        border: 1px solid black;
+    }
+
+    img{
+        max-width: 50px;
+    }
+</style>
