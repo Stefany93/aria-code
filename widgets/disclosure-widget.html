@@ -1,0 +1,31 @@
+<button id="trigger" aria-expanded="false"> What is Stefany's favorite color? </button>
+<div class="hidden_text" id="text">Pink</div>
+
+
+<style>
+    .hidden_text{
+        display:none;
+    }
+
+    .visible_text{
+        display: block !important;
+    }
+</style>
+
+<script>
+
+    let trigger = document.querySelector('#trigger');
+    let text = document.querySelector('#text');
+
+    trigger.addEventListener('click', function(e){
+        text.classList.toggle("visible_text");
+        if(trigger.getAttribute('aria-expanded') == 'true')
+        {
+            trigger.setAttribute('aria-expanded', 'false');
+        }else if(trigger.getAttribute('aria-expanded') == 'false')
+        {
+            trigger.setAttribute('aria-expanded', 'true');
+        }
+    })
+
+</script>
