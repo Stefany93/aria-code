@@ -1,2 +1,2 @@
 # aria-code
-WAI-ARIA code and componets used in Stefany's courses
+WAI-ARIA code and components used in Stefany's courses.
